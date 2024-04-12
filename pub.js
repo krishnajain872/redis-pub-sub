@@ -1,4 +1,3 @@
-const Redis = require("ioredis");
 const redis = require("./db");
 const { faker } = require("@faker-js/faker");
 setInterval(() => {
