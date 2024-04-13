@@ -11,9 +11,10 @@ redis.subscribe("my-channel-1", "my-channel-2", (err, count) => {
 });
 
 redis.on("message", (channel, message) => {
-  console.log(`Received ${message} from ${channel}`);
+  console.log(`Received ${message} from ${channel}\n\n`);
 });
-
+console.log("\n\n");
 redis.on("messageBuffer", (channel, message) => {
-  console.log(channel, message);
+  console.log(`Received buffer message \n ${message} from ${channel}\n\n`);
+  console.log("\n\n");
 });
